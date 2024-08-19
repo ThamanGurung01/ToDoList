@@ -15,6 +15,7 @@ const AddTask=()=>{
 }
 return (
   <div className="ToDoInput">
+      <h1>ToDoInput</h1>
     <input type="text" placeholder="New Todo" value={InputList} onChange={(e)=>InputHandler(e.target)}/>
     <button type="button" onClick={AddTask}>Add New Task</button>
   </div>

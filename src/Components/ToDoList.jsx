@@ -33,8 +33,9 @@ function ToDoList(){
   }
   return(
     <div className="ToDoList">
-      <ul className="Lists">
-      {Lists.map((element,index)=> <li key={index}>{element.task} <input type="checkbox" value={element.task} onClick={()=>FinishedTaskHandler(index)} /> <img src="./src/assets/delete.png"  onClick={()=>deleteTask(index)}/></li> )}
+      <h1>ToDoLists</h1>
+      <ul className="Lists" style={{paddingBottom:`${Lists.length>0?"1rem":""}`}}>
+      {Lists.map((element,index)=> <li style={{textDecoration: `${element.isChecked?"line-through":""}`}} key={index}><div><input type="checkbox" value={element.task} onClick={()=>FinishedTaskHandler(index)} /><span>{element.task}</span></div><img src="./src/assets/delete.png"  onClick={()=>deleteTask(index)}/></li> )}
       </ul>
     </div>
   );
