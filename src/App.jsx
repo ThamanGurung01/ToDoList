@@ -13,7 +13,6 @@ const [isClicked,setIsClicked]=useState(false);
     <InputTaskContext.Provider value={[InputList,setInputLists]}>
       <isClickedContext.Provider value={[isClicked,setIsClicked]}>
           <div className="container">
-      <h1>ToDoLists</h1>
       <ToDoInput/>
       <ToDoList/>
     </div>
